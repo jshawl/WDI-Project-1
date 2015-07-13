@@ -1,0 +1,17 @@
+
+.container {
+  background: #ccc;
+  border: #999 1px solid;
+  width: 750px;
+  height: 500px;
+  padding: 24px;
+  margin: 0px auto;
+}
+
+.block {
+  background: green;
+  height: 100px;
+  width: 100px;
+  display:inline-block;
+  margin: 10px;
+}
