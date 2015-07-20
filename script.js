@@ -1,6 +1,7 @@
-$(function(){
+$(function(){ //nice use of abbreviated document.ready!
 
 var memory_array = ['card1.png','card1.png','card2.png','card2.png','card3.png','card3.png','card4.png','card4.png','card5.png','card5.png','card6.png','card6.png','card7.png','card7.png','card8.png','card8.png','card9.png','card9.png','card10.png','card10.png','card11.png','card11.png','card12.png','card12.png'];
+// could also use a for loop to build this arrya
 var memory_value = [];
 var score = 0;
 var totalScore = memory_array.length / 2;
@@ -26,11 +27,15 @@ boardInit();
 $("body").on("click",".block:not(.flipped)",function(e){
   //reach to the block that was just clicked and get the value of
   //the custom attribute called 'data-value' -> this is the value of the card
+  // EXCELLENT code comments!!!
   var cardvalue = $(this).attr("data-value");
+  // some people use $ to denote jquery variables: $cardValue
   
   //we have an array of the flipped card values. we check to see 
   //if we have less that 2 cards flipped. because we don't want to go passed 2 cards
   if(memory_value.length < 2 && hold == false ){
+    // I really like your hold implementation. I was unable to
+    // produce any bugs by clicking rapidly on several cards.
     //if we have less that 2 -> add class 'flipped' to the cards that was just clicked
     $(this).addClass("flipped");
     //push the value of the card to our flipped cards array
@@ -102,6 +107,12 @@ function boardInit(){
 
 
 });//end ready
+
+// Overall:
+// This is an excellent solution!!! I would like to share this with the class
+// with your permission as an example of excellent code commenting.
+// It's clear how much thought you put into the game logic by your explanations.
+// Your JavaScript skills are rapidly improving!!
 
 
 
